@@ -102,7 +102,7 @@ body {
     padding: 5px;
 }
 
-.tribute-info-wraper {
+.tribute-info-wrapper {
     display: flex;
     flex: 1;
     min-width: 50%;
@@ -110,7 +110,7 @@ body {
     flex-direction: column;
 }
 
-.tribute-info-wraper p {
+.tribute-info-wrapper p {
     font-size: 3em;
 }
 
@@ -221,7 +221,7 @@ hr {
         padding-bottom: 3%;
     }
 
-    .tribute-info-wraper {
+    .tribute-info-wrapper {
         min-width: 50%;
     }
 
