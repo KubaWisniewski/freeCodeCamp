@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+}
+
+body {
+    background: linear-gradient(
+            to bottom,
+            rgb(199, 199, 199) 0%,
+            rgb(184, 184, 184) 0%,
+            rgb(127, 127, 127) 0%,
+            rgb(193, 193, 193) 46%,
+            rgb(224, 224, 224) 84%
+    ) no-repeat fixed;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-areas: "header" "content" "quote" "history" "footer";
+}
+
+.header {
+    grid-area: header;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.animation {
+    animation: apple-logo;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes apple-logo {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 4em;
+}
+
+.subtitle {
+    font-size: 0.3em;
+}
+
+.content {
+    height: 75vh;
+    grid-area: content;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+.image {
+    display: block;
+    width: auto;
+    height: auto;
+    opacity: 0.9;
+    border-radius: 5%;
+    max-width: 25em;
+    max-height: 30em;
+    margin: auto;
+}
+
+.img-caption {
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    width: 50%;
+    padding: 5px;
+}
+
+.tribute-info-wraper {
+    display: flex;
+    flex: 1;
+    min-width: 50%;
+    margin-left: 5%;
+    flex-direction: column;
+}
+
+.tribute-info-wraper p {
+    font-size: 3em;
+}
+
+#tribute-info::first-letter {
+    font-size: 200%;
+}
+
+.tribute-info {
+    font-size: 1.5em;
+    margin: auto;
+}
+
+.quote {
+    background-color: black;
+    grid-area: quote;
+    height: 25vh;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.history {
+    background-color: lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.history ul {
+    width: 75vw;
+    list-style-type: none;
+}
+
+.history li {
+    display: block;
+    margin-bottom: 5px;
+    background-color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+.history p {
+    text-align: left;
+    font-size: 3em;
+    padding-left: 5%;
+}
+
+.history hr {
+    margin-bottom: 2%;
+}
+
+.history li:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.tribute-link {
+    background-color: darkgrey;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 30px auto;
+    opacity: 0.8;
+}
+
+.tribute-link:hover {
+    opacity: 1;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    margin: auto;
+    height: 3px;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0)
+    );
+}
+
+@media screen and(max-width: 1024px), (max-height: 1024px) {
+    .content {
+        height: auto;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .tribute-info-wraper {
+        min-width: 50%;
+    }
+
+    .bot {
+        height: auto;
+    }
+
+    .quote {
+        height: 100%;
+        width: auto;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .footer {
+        height: auto;
+    }
+}
